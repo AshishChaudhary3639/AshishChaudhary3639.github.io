@@ -7,11 +7,18 @@ import Skills from "./Skills";
 const AllRoutes = () => {
   return (
     <>
-      <Home />
-      <Skills />
-
-      <Projects />
-      <Contact />
+      <div id="home" style={{padding:"0px"}}>
+        <Home />
+      </div>
+      <div id="skills" style={{padding:"0px"}}>
+        <Skills />
+      </div>
+      <div id="projects" style={{padding:"0px"}}>
+        <Projects />
+      </div>
+      <div id="contact" style={{padding:"0px"}}>
+        <Contact />
+      </div>
     </>
   );
 };

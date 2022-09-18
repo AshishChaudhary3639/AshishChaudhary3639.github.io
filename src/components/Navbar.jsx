@@ -6,27 +6,26 @@ import {
   Heading,
   Spacer,
   Show,
-  RadioGroup,
-  useDisclosure,
-  Drawer,
-  DrawerOverlay,
-  DrawerContent,
   VStack,
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
+  IconButton,
 } from "@chakra-ui/react";
 import React from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { NavHashLink } from "react-router-hash-link";
+import { NavHashLink as NavLink } from "react-router-hash-link";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
 import { FaHackerrank } from "react-icons/fa";
 import { Link } from "@chakra-ui/react";
 import styles from "../pages/Skills.module.css";
 
 const Navbar = () => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
-  const [placement, setPlacement] = React.useState("top");
   return (
     <>
       <Flex
+        flex="1"
         minWidth="max-content"
         alignItems="center"
         gap="2"
@@ -38,21 +37,23 @@ const Navbar = () => {
           md: "4rem",
         }}
         justifyContent={{
-          sm: "center",
+         
           md: "center",
         }}
+        p="0px 20px 0px 20px"
       >
         <Box
           p="2"
           visibility={{
-            sm:"hidden",
+            base: "hidden",
+            sm: "hidden",
             md: "visible",
             lg: "visible",
           }}
         >
           <Heading size="md">Excuse Me</Heading>
         </Box>
-   
+
         <Spacer />
         <Show above="sm">
           <ButtonGroup
@@ -63,27 +64,27 @@ const Navbar = () => {
               md: "flex",
             }}
           >
-            <NavHashLink to="#home">
+            <NavLink smooth to="#home">
               <Button colorScheme="teal" variant="outline">
                 Home
               </Button>
-            </NavHashLink>
+            </NavLink>
 
-            <NavHashLink to="#skills">
+            <NavLink smooth to="#skills">
               <Button colorScheme="teal" variant="outline">
                 Skills
               </Button>
-            </NavHashLink>
-            <NavHashLink to="#projects">
+            </NavLink>
+            <NavLink smooth to="#projects">
               <Button colorScheme="teal" variant="outline">
                 Projects
               </Button>
-            </NavHashLink>
-            <NavHashLink to="#contact">
+            </NavLink>
+            <NavLink smooth to="#contact">
               <Button colorScheme="teal" variant="outline">
                 Contacts
               </Button>
-            </NavHashLink>
+            </NavLink>
           </ButtonGroup>
         </Show>
         <Box
@@ -91,44 +92,40 @@ const Navbar = () => {
             sm: "none",
             md: "none",
           }}
-          pr="1rem"
+          
         >
-          {" "}
-          <RadioGroup
-            defaultValue={placement}
-            onChange={setPlacement}
-          ></RadioGroup>
-          <Button colorScheme="blue" onClick={onOpen}>
-            <GiHamburgerMenu color="white" fontSize="25px" />
-          </Button>
-          <Drawer placement={placement} onClose={onClose} isOpen={isOpen}>
-            <DrawerOverlay />
-            <DrawerContent textAlign="center">
-              <NavHashLink to="#home">
-                <Button colorScheme="teal" variant="outline" w="100%">
+          <Menu>
+            <MenuButton
+              as={IconButton}
+              aria-label="Options"
+              icon={<GiHamburgerMenu color="white" fontSize="2rem"/>}
+              variant="outline"
+              mr="20px"
+            />
+
+            <MenuList>
+              <MenuItem>
+                <NavLink smooth to="#home">
                   Home
-                </Button>
-              </NavHashLink>
-
-              <NavHashLink to="#skills">
-                <Button colorScheme="teal" variant="outline" w="100%">
+                </NavLink>
+              </MenuItem>
+              <MenuItem>
+                <NavLink smooth to="#skills">
                   Skills
-                </Button>
-              </NavHashLink>
-
-              <NavHashLink to="#projects">
-                <Button colorScheme="teal" variant="outline" w="100%">
+                </NavLink>
+              </MenuItem>
+              <MenuItem>
+                <NavLink smooth to="#projects">
                   Projects
-                </Button>
-              </NavHashLink>
-
-              <NavHashLink to="#contact">
-                <Button colorScheme="teal" variant="outline" w="100%">
+                </NavLink>
+              </MenuItem>
+              <MenuItem>
+                <NavLink smooth to="#contact">
                   Contacts
-                </Button>
-              </NavHashLink>
-            </DrawerContent>
-          </Drawer>
+                </NavLink>
+              </MenuItem>
+            </MenuList>
+          </Menu>
         </Box>
       </Flex>
       <VStack
@@ -144,7 +141,6 @@ const Navbar = () => {
         }}
         ml="11px"
         p="12px"
-    
       >
         <div className={styles.skillSpin}>
           <Link href="https://github.com/AshishChaudhary3639" isExternal>

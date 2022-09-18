@@ -40,7 +40,7 @@ const Home = () => {
         <Box
           w="60%"
           textAlign={{
-            base: "center",
+            base: "left",
             sm: "center",
             md: "left",
           }}
