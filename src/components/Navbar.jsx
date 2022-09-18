@@ -12,7 +12,6 @@ import {
   DrawerOverlay,
   DrawerContent,
   VStack,
-  HStack,
 } from "@chakra-ui/react";
 import React from "react";
 import { GiHamburgerMenu } from "react-icons/gi";

@@ -5,7 +5,6 @@ import {
   Heading,
   Icon,
   Image,
-  Text,
 } from "@chakra-ui/react";
 import { DownloadIcon } from "@chakra-ui/icons";
 import React from "react";

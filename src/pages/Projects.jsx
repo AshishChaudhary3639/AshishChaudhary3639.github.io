@@ -10,7 +10,7 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import { BsGithub } from "react-icons/bs";
-import { DiCss3, DiJavascript1, DiReact } from "react-icons/di";
+import {  DiJavascript1, DiReact } from "react-icons/di";
 import { SiRedux, SiChakraui } from "react-icons/si";
 import { IoMdArrowDropupCircle } from "react-icons/io";
 
