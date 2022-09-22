@@ -1,15 +1,8 @@
-import {
-  Box,
-  Button,
-  Flex,
-  Heading,
-  Icon,
-  Image,
-} from "@chakra-ui/react";
+import { Box, Button, Flex, Heading, Icon, Image } from "@chakra-ui/react";
 import { DownloadIcon } from "@chakra-ui/icons";
 import React from "react";
 import { Link } from "react-router-dom";
-// import Typing from "react-typing-animation";
+import Typewriter from "typewriter-effect";
 
 const Home = () => {
   return (
@@ -46,18 +39,20 @@ const Home = () => {
           }}
         >
           <Box>
-            <Heading size='2xl'>Hi</Heading>
-            <Heading size='3xl'>I am Ashish</Heading>
-            {/* <Typing loop='true'>
-                      <Typing.Speed ms={50} />
-                      <span>Web Developer</span>
-                      <Typing.Delay ms={1000} />
-                      <Typing.Backspace count={20} />
-                      <span>Programmer</span>
-                      <Typing.Delay ms={1000} />
-                      <Typing.Backspace count={20} />
-                     
-                    </Typing> */}
+            <Heading size="xl">Hi</Heading>
+            <h1 style={{fontSize:"3rem", fontWeight:"bold"}}>I am <span style={{color:"blue"}}>Ashish</span></h1>
+            <Heading size="xl">
+              
+            <Typewriter
+              options={{
+                strings: ["A Full Stack Developer", "A MERN Stack Developer"],
+                autoStart: true,
+                loop: true,
+                deleteSpeed: 50,
+              }}
+            />
+            </Heading>
+
           </Box>
           <Link
             to="/files/Ashish_chaudhary_Resume.pdf"
