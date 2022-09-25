@@ -17,8 +17,8 @@ const AllRoutes = () => {
       <div id="projects" style={{padding:"0px"}}>
         <Projects />
       </div>
-      <div id="contact" style={{padding:"0px"}}>
-        {/* <GitHub /> */}
+      <div id="github-calander" style={{padding:"0px"}}>
+        <GitHub />
       </div>
       <div id="contact" style={{padding:"0px"}}>
         <Contact />
