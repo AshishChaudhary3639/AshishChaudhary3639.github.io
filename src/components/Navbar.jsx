@@ -51,7 +51,7 @@ const Navbar = () => {
             lg: "visible",
           }}
         >
-          <Heading size="md">Excuse Me</Heading>
+          <Heading size="md" color="white">ashishchaudhary3639@gmail.com</Heading>
         </Box>
 
         <Spacer />

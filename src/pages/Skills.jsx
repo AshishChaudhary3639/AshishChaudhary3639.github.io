@@ -51,7 +51,7 @@ const Skills = () => {
     
         >
           <div className={styles.skillSpin}>
-            <AiFillHtml5 color="orange" />
+            <AiFillHtml5 color="orange" className={styles.skills_grid_item}/>
           </div>
         </Box>
 
@@ -65,7 +65,7 @@ const Skills = () => {
           // }}
         >
           <div className={styles.skillSpin}>
-            <DiCss3 color="lightblue" />
+            <DiCss3 color="lightblue" className={styles.skills_grid_item}/>
           </div>
         </Box>
         <Box
@@ -78,7 +78,7 @@ const Skills = () => {
           // }}
         >
           <div className={styles.skillSpin}>
-            <DiJavascript1 color="orangered" />
+            <DiJavascript1 color="orangered" className={styles.skills_grid_item}/>
           </div>
         </Box>
         <Box
@@ -91,7 +91,7 @@ const Skills = () => {
           // }}
         >
           <div className={styles.skillSpin}>
-            <DiReact color="skyblue" />
+            <DiReact color="skyblue" className={styles.skills_grid_item}/>
           </div>
         </Box>
       </Flex>
@@ -118,13 +118,14 @@ const Skills = () => {
       >
         <Box
           data-content="REDUX"
+          
           fontSize="110px"
           borderRadius="7px"
           boxShadow="rgba(0, 0, 0, 0.24) 0px 3px 8px"
        
         >
           <div className={styles.skillSpin}>
-            <SiRedux color="#764abc" />
+            <SiRedux color="#764abc" className={styles.skills_grid_item}/>
           </div>
         </Box>
         <Box
@@ -135,7 +136,7 @@ const Skills = () => {
           
         >
           <div className={styles.skillSpin}>
-            <SiChakraui color="#6fcad0" />
+            <SiChakraui color="#6fcad0" className={styles.skills_grid_item}/>
           </div>
         </Box>
         <Box
@@ -145,8 +146,8 @@ const Skills = () => {
           boxShadow="rgba(0, 0, 0, 0.24) 0px 3px 8px"
         
         >
-          <div className={styles.skillSpin}>
-            <BsFillBootstrapFill color="#6fcad0" />
+          <div className={styles.skillSpin} id={styles.skills_grid_item}>
+            <BsFillBootstrapFill color="#6fcad0" className={styles.skills_grid_item} />
           </div>
         </Box>
         <Box
@@ -156,7 +157,7 @@ const Skills = () => {
           boxShadow="rgba(0, 0, 0, 0.24) 0px 3px 8px"
         >
           <div className={styles.skillSpin}>
-            <BsWordpress color="#6fcad0" />
+            <BsWordpress color="#6fcad0" className={styles.skills_grid_item}/>
           </div>
         </Box>
       </Flex>

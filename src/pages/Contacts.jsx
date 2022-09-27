@@ -1,6 +1,7 @@
 import {
   Box,
   Button,
+  Flex,
   Heading,
   Input,
   Textarea,
@@ -42,8 +43,14 @@ const Contact = () => {
   };
   return (
     <>
-      <VStack
+      
+      <Flex
         h="auto"
+        display={{
+          base:"block",
+          sm:"block",
+          md:"flex"
+        }}
         p={{
           base: "10px",
           sm: "15px",
@@ -53,7 +60,24 @@ const Contact = () => {
         m="1rem auto"
         bg="whitesmoke"
       >
-        <Heading>Contact</Heading>
+        <Box
+          w={{
+            base: "80%",
+            sm: "80%",
+            md: "60%",
+          }}
+          // boxShadow="rgba(0, 0, 0, 0.24) 0px 3px 8px"
+          // m="auto"
+          p="10px"
+          borderRadius={3}
+          textAlign="left"
+          // bg="white"
+          
+        >
+         <Heading size="sm" lineHeight="2em">{`Email:- ashishchaudhary3639@gmail.com`}</Heading>
+         <Heading size="sm" lineHeight="2em">{`Phone:- +91 9161610139`}</Heading>
+         <Heading size="sm" lineHeight="2em">{`Address:- Siddharth Nagar, Uttar Pradesh, India, 272192`}</Heading>
+        </Box>
         <Box
           w={{
             base: "80%",
@@ -118,7 +142,7 @@ const Contact = () => {
             </Button>
           </form>
         </Box>
-      </VStack>
+      </Flex>
     </>
   );
 };

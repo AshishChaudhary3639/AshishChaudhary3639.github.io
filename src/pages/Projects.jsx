@@ -26,7 +26,7 @@ const Projects = () => {
           p="10px"
         >
           <Flex justifyContent="space-between" mb="20px">
-            <Text as='b' fontSize='2xl'>tripvillas.com</Text>
+            <Text as='b' fontSize='2xl'>Tripvillas</Text>
             <Flex gap="10px">
               <Box
                 data-content="REACT"
@@ -101,7 +101,7 @@ const Projects = () => {
           p="10px"
         >
           <Flex justifyContent="space-between" mb="20px">
-            <Text as='b' fontSize='2xl'>revv.co.in</Text>
+            <Text as='b' fontSize='2xl'>Revv</Text>
             <Flex gap="10px">
               <Box
                 data-content="REACT"

@@ -1,6 +1,13 @@
 .skillSpin{
-
+    padding: 5px;
 }
+.skills_grid_item {
+    transition: transform .2s !important;
+    cursor: pointer;
+  }
+.skills_grid_item:hover {
+    transform: scale(1.3) !important;
+  }
 .skillSpin:hover{
     animation: shake 1s;
 
