@@ -11,14 +11,14 @@ const AllRoutes = () => {
       <div id="home" style={{padding:"0px"}}>
         <Home />
       </div>
-      <div id="github-calander" style={{padding:"0px"}}>
-        <GitHub />
-      </div>
       <div id="skills" style={{padding:"0px"}}>
         <Skills />
       </div>
       <div id="projects" style={{padding:"0px"}}>
         <Projects />
+      </div>
+      <div id="github-calander" style={{padding:"0px"}}>
+        <GitHub />
       </div>
       <div id="contact" style={{padding:"0px"}}>
         <Contact />
