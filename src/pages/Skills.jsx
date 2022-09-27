@@ -1,5 +1,4 @@
-import { Box, Flex, Heading, Icon, VStack } from "@chakra-ui/react";
-import { MdCheckCircle } from "react-icons/md";
+import { Box, Flex, Heading, VStack } from "@chakra-ui/react";
 import React from "react";
 import { AiFillHtml5 } from "react-icons/ai";
 import { DiCss3, DiJavascript1, DiReact } from "react-icons/di";
@@ -8,9 +7,7 @@ import { BsFillBootstrapFill, BsWordpress } from "react-icons/bs";
 import styles from "./Skills.module.css";
 
 const Skills = () => {
-  function Example() {
-    return <Icon as={MdCheckCircle} />;
-  }
+
   return (
     <VStack
       h={{

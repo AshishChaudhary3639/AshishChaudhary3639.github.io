@@ -6,7 +6,6 @@ import {
   Input,
   Textarea,
   useToast,
-  VStack,
 } from "@chakra-ui/react";
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
