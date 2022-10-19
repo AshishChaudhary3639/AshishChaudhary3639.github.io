@@ -55,7 +55,7 @@ const Home = () => {
 
           </Box>
           <Link
-            to="/files/Ashish_chaudhary_Resume.pdf"
+            to="/files/Ashish_Kumar_Chaudhary.pdf"
             target="_blanck"
             download
           >
