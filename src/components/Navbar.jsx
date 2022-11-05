@@ -14,9 +14,11 @@ import {
   IconButton,
 } from "@chakra-ui/react";
 import React from "react";
+import { Icon } from "@chakra-ui/react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { NavHashLink as NavLink } from "react-router-hash-link";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
+import { DownloadIcon } from "@chakra-ui/icons";
 import { FaHackerrank } from "react-icons/fa";
 import { Link } from "@chakra-ui/react";
 import styles from "../pages/Skills.module.css";
@@ -37,7 +39,6 @@ const Navbar = () => {
           md: "4rem",
         }}
         justifyContent={{
-         
           md: "center",
         }}
         p="0px 20px 0px 20px"
@@ -51,7 +52,9 @@ const Navbar = () => {
             lg: "visible",
           }}
         >
-          <Heading size="md" color="white">ashishchaudhary3639@gmail.com</Heading>
+          <Heading size="md" color="white">
+            ashishchaudhary3639@gmail.com
+          </Heading>
         </Box>
 
         <Spacer />
@@ -85,6 +88,15 @@ const Navbar = () => {
                 Contacts
               </Button>
             </NavLink>
+            <Link
+              to="/files/Ashish_Kumar_Chaudhary.pdf"
+              target="_blanck"
+              download
+            >
+              <Button colorScheme="teal" variant="outline">
+                Resume <Icon as={DownloadIcon} />
+              </Button>
+            </Link>
           </ButtonGroup>
         </Show>
         <Box
@@ -92,18 +104,17 @@ const Navbar = () => {
             sm: "none",
             md: "none",
           }}
-          
         >
           <Menu>
             <MenuButton
               as={IconButton}
               aria-label="Options"
-              icon={<GiHamburgerMenu color="white" fontSize="2rem"/>}
+              icon={<GiHamburgerMenu color="white" fontSize="2rem" />}
               variant="outline"
               mr="20px"
             />
 
-            <MenuList>
+            <MenuList pl="1rem">
               <MenuItem>
                 <NavLink smooth to="#home">
                   Home
@@ -124,6 +135,16 @@ const Navbar = () => {
                   Contacts
                 </NavLink>
               </MenuItem>
+              <Link
+                to="/files/Ashish_Kumar_Chaudhary.pdf"
+                target="_blanck"
+                download
+              >
+                <Button>
+                  Resume
+                  <Icon as={DownloadIcon} />
+                </Button>
+              </Link>
             </MenuList>
           </Menu>
         </Box>
