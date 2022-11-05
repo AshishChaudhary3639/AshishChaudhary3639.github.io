@@ -55,8 +55,8 @@ const Home = () => {
 
           </Box>
           <Link
-            to="/files/Ashish_Kumar_Chaudhary.pdf"
-            target="_blanck"
+            to="/files/Ashish-Kumar-Chaudhary.pdf"
+            target="_blank"
             download
           >
             <Button colorScheme="teal" variant="outline" mt="1rem">

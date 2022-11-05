@@ -88,15 +88,15 @@ const Navbar = () => {
                 Contacts
               </Button>
             </NavLink>
-            <Link
-              to="/files/Ashish_Kumar_Chaudhary.pdf"
-              target="_blanck"
-              download
+            <a
+              href="https://drive.google.com/file/d/18471DOU5uUgl6blyXXhuPxxL4V10rT-t/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <Button colorScheme="teal" variant="outline">
-                Resume <Icon as={DownloadIcon} />
-              </Button>
-            </Link>
+                <Button colorScheme="teal" variant="outline">
+                  Resume <Icon as={DownloadIcon} />
+                </Button>
+            </a>
           </ButtonGroup>
         </Show>
         <Box
@@ -135,16 +135,17 @@ const Navbar = () => {
                   Contacts
                 </NavLink>
               </MenuItem>
-              <Link
-                to="/files/Ashish_Kumar_Chaudhary.pdf"
-                target="_blanck"
+              <a
+                href="https://drive.google.com/file/d/18471DOU5uUgl6blyXXhuPxxL4V10rT-t/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
                 download
               >
                 <Button>
                   Resume
                   <Icon as={DownloadIcon} />
                 </Button>
-              </Link>
+              </a>
             </MenuList>
           </Menu>
         </Box>
