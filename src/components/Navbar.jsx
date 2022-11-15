@@ -24,6 +24,11 @@ import { Link } from "@chakra-ui/react";
 import styles from "../pages/Skills.module.css";
 
 const Navbar = () => {
+  const handleResume=()=>{
+    return(
+      window.open("https://drive.google.com/file/d/18471DOU5uUgl6blyXXhuPxxL4V10rT-t/view?usp=sharing")
+    )
+  }
   return (
     <>
       <Flex
@@ -89,11 +94,10 @@ const Navbar = () => {
               </Button>
             </NavLink>
             <a
-              href="https://drive.google.com/file/d/18471DOU5uUgl6blyXXhuPxxL4V10rT-t/view?usp=sharing"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/files/Ashish-Kumar-Chaudhary.pdf"
+              download
             >
-                <Button colorScheme="teal" variant="outline">
+                <Button onClick={handleResume} colorScheme="teal" variant="outline">
                   Resume <Icon as={DownloadIcon} />
                 </Button>
             </a>
@@ -141,7 +145,7 @@ const Navbar = () => {
                 rel="noopener noreferrer"
                 download
               >
-                <Button>
+                <Button onClick={handleResume}>
                   Resume
                   <Icon as={DownloadIcon} />
                 </Button>
