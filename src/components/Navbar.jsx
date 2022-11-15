@@ -24,11 +24,11 @@ import { Link } from "@chakra-ui/react";
 import styles from "../pages/Skills.module.css";
 
 const Navbar = () => {
-  const handleResume=()=>{
-    return(
-      window.open("https://drive.google.com/file/d/18471DOU5uUgl6blyXXhuPxxL4V10rT-t/view?usp=sharing")
-    )
-  }
+  const handleResume = () => {
+    return window.open(
+      "https://drive.google.com/file/d/18471DOU5uUgl6blyXXhuPxxL4V10rT-t/view?usp=sharing"
+    );
+  };
   return (
     <>
       <Flex
@@ -93,13 +93,14 @@ const Navbar = () => {
                 Contacts
               </Button>
             </NavLink>
-            <a
-              href="/files/Ashish-Kumar-Chaudhary.pdf"
-              download
-            >
-                <Button onClick={handleResume} colorScheme="teal" variant="outline">
-                  Resume <Icon as={DownloadIcon} />
-                </Button>
+            <a href="/files/Ashish-Chaudhary-Resume.pdf" download>
+              <Button
+                onClick={handleResume}
+                colorScheme="teal"
+                variant="outline"
+              >
+                Resume <Icon as={DownloadIcon} />
+              </Button>
             </a>
           </ButtonGroup>
         </Show>
@@ -140,7 +141,7 @@ const Navbar = () => {
                 </NavLink>
               </MenuItem>
               <a
-                href="https://drive.google.com/file/d/18471DOU5uUgl6blyXXhuPxxL4V10rT-t/view?usp=sharing"
+                href="/files/Ashish-Chaudhary-Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 download
