@@ -23,12 +23,13 @@ const Skills = () => {
     >
       <Heading>Skills</Heading>
       <Flex
-        gap="3rem"
+        gap="2.5rem"
         justifyContent={{
           base: "center",
           sm: "center",
-          md: "space-between",
+          md: "center",
         }}
+        p="0px 20px"
         display={{
           base: "block",
           sm: "block",
@@ -36,14 +37,14 @@ const Skills = () => {
         }}
         w={{
           base: "70%",
-          sm: "70%",
+          sm: "60%",
           md: "90%",
           lg: "70%",
         }}
       >
         <Box
           data-content="HTML"
-          fontSize="110px"
+          fontSize="90px"
           borderRadius="7px"
           boxShadow="rgba(0, 0, 0, 0.24) 0px 3px 8px"
     
@@ -55,7 +56,7 @@ const Skills = () => {
 
         <Box
           data-content="CSS"
-          fontSize="100px"
+          fontSize="90px"
           borderRadius="7px"
           boxShadow="rgba(0, 0, 0, 0.24) 0px 3px 8px"
           // _hover={{
@@ -68,7 +69,7 @@ const Skills = () => {
         </Box>
         <Box
           data-content="JS"
-          fontSize="100px"
+          fontSize="90px"
           borderRadius="7px"
           boxShadow="rgba(0, 0, 0, 0.24) 0px 3px 8px"
           // _hover={{
@@ -81,7 +82,7 @@ const Skills = () => {
         </Box>
         <Box
           data-content="REACT"
-          fontSize="100px"
+          fontSize="90px"
           borderRadius="7px"
           boxShadow="rgba(0, 0, 0, 0.24) 0px 3px 8px"
           // _hover={{
@@ -95,7 +96,7 @@ const Skills = () => {
         <Box
           data-content="REDUX"
           
-          fontSize="100px"
+          fontSize="90px"
           borderRadius="7px"
           boxShadow="rgba(0, 0, 0, 0.24) 0px 3px 8px"
        
@@ -107,12 +108,13 @@ const Skills = () => {
       </Flex>
 
       <Flex
-        gap="3rem"
+        gap="2.5rem"
         justifyContent={{
           base: "center",
           sm: "center",
-          md: "space-between",
+          md: "center",
         }}
+        p="0px 20px"
         mt="5rem"
         display={{
           base: "block",
@@ -129,7 +131,7 @@ const Skills = () => {
        
         <Box
           data-content="CHAKRA"
-          fontSize="100px"
+          fontSize="90px"
           borderRadius="7px"
           boxShadow="rgba(0, 0, 0, 0.24) 0px 3px 8px"
           
@@ -140,7 +142,7 @@ const Skills = () => {
         </Box>
         <Box
           data-content="BOOTSTRAP"
-          fontSize="100px"
+          fontSize="90px"
           borderRadius="7px"
           boxShadow="rgba(0, 0, 0, 0.24) 0px 3px 8px"
         
@@ -151,7 +153,7 @@ const Skills = () => {
         </Box>
         <Box
           data-content="NODEJS"
-          fontSize="100px"
+          fontSize="90px"
           borderRadius="7px"
           boxShadow="rgba(0, 0, 0, 0.24) 0px 3px 8px"
         >
@@ -161,7 +163,7 @@ const Skills = () => {
         </Box>
         <Box
           data-content="EXPRESS"
-          fontSize="100px"
+          fontSize="90px"
           borderRadius="7px"
           boxShadow="rgba(0, 0, 0, 0.24) 0px 3px 8px"
         >
@@ -171,7 +173,7 @@ const Skills = () => {
         </Box>
         <Box
           data-content="MONGODB"
-          fontSize="100px"
+          fontSize="90px"
           borderRadius="7px"
           boxShadow="rgba(0, 0, 0, 0.24) 0px 3px 8px"
         >

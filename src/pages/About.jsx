@@ -14,7 +14,16 @@ const About = () => {
       bg="whitesmoke"
     >
       <Heading>About</Heading>
-      <Text w="60%" fontSize={"3xl"}>
+      <Text w={{
+        sm:"80%",
+        md:"60%"
+      }} fontSize={{
+        base:"2xl",
+        sm:"2xl",
+        md:"3xl"
+      }}
+      
+      >
         I am very passionate in software industry from my collage time. I have
         sound understanding computer fundamental, Data structure, programming
         languages and framework/library.

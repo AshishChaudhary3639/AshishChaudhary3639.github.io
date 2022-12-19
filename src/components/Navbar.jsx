@@ -3,7 +3,6 @@ import {
   Button,
   ButtonGroup,
   Flex,
-  Heading,
   Spacer,
   Show,
   VStack,
@@ -15,10 +14,9 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import { Icon } from "@chakra-ui/react";
-import { GiHamburgerMenu } from "react-icons/gi";
 import { NavHashLink as NavLink } from "react-router-hash-link";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
-import { DownloadIcon } from "@chakra-ui/icons";
+import { DownloadIcon, HamburgerIcon } from "@chakra-ui/icons";
 import { FaHackerrank } from "react-icons/fa";
 import { Link } from "@chakra-ui/react";
 import styles from "../pages/Skills.module.css";
@@ -29,6 +27,7 @@ const Navbar = () => {
       "https://drive.google.com/file/d/10RfcKTz9eADgoMQKociXZa-KbMjd5YeR/view?usp=sharing"
     );
   };
+
   return (
     <>
       <Flex
@@ -43,34 +42,20 @@ const Navbar = () => {
         h={{
           md: "4rem",
         }}
-        justifyContent={{
-          md: "center",
-        }}
-        p="0px 20px 0px 20px"
+        justifyContent={"left"}
+        pr="340px"
       >
-        <Box
-          p="2"
-          visibility={{
-            base: "hidden",
-            sm: "hidden",
-            md: "visible",
-            lg: "visible",
-          }}
-        >
-          <Heading size="md" color="white">
-            ashishchaudhary3639@gmail.com
-          </Heading>
-        </Box>
-
+    
         <Spacer />
-        <Show above="sm">
+        <Show breakpoint='(min-width: 425px)'>
           <ButtonGroup
             gap="6"
             display={{
-              base: "none",
-              sm: "flex",
+             
               md: "flex",
             }}
+            p={"8px 0px"}
+            justifyContent="center"
           >
             <NavLink smooth to="#home">
               <Button colorScheme="teal" variant="outline">
@@ -106,53 +91,61 @@ const Navbar = () => {
         </Show>
         <Box
           display={{
-            sm: "none",
+            sm:"none",
+            md:"none"
+          }}
+          m={"0px 210px 0px 0px"}
+          
+        >
+
+        <Menu
+          display={{
+            sm: "block",
             md: "none",
           }}
         >
-          <Menu>
-            <MenuButton
-              as={IconButton}
-              aria-label="Options"
-              icon={<GiHamburgerMenu color="white" fontSize="2rem" />}
-              variant="outline"
-              mr="20px"
-            />
+          <MenuButton
+            as={IconButton}
+            icon={<HamburgerIcon color="white" fontSize="2rem" />}
+            // icon={<GiHamburgerMenu color="white" fontSize="2rem"/>}
+            variant="outline"
+          />
 
-            <MenuList pl="1rem">
-              <MenuItem>
-                <NavLink smooth to="#home">
-                  Home
-                </NavLink>
-              </MenuItem>
-              <MenuItem>
-                <NavLink smooth to="#skills">
-                  Skills
-                </NavLink>
-              </MenuItem>
-              <MenuItem>
-                <NavLink smooth to="#projects">
-                  Projects
-                </NavLink>
-              </MenuItem>
-              <MenuItem>
-                <NavLink smooth to="#contact">
-                  Contacts
-                </NavLink>
-              </MenuItem>
-              <a
-                href="/files/Ashish-Chaudhary-Resume.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                download
-              >
-                <Button onClick={handleResume}>
-                  Resume
-                  <Icon as={DownloadIcon} />
-                </Button>
-              </a>
-            </MenuList>
-          </Menu>
+          <MenuList>
+            <MenuItem>
+              <NavLink smooth to="#home">
+                Home
+              </NavLink>
+            </MenuItem>
+            <MenuItem>
+              <NavLink smooth to="#skills">
+                Skills
+              </NavLink>
+            </MenuItem>
+            <MenuItem>
+              <NavLink smooth to="#projects">
+                Projects
+              </NavLink>
+            </MenuItem>
+            <MenuItem>
+              <NavLink smooth to="#contact">
+                Contacts
+              </NavLink>
+            </MenuItem>
+            <a
+              href="/files/Ashish-Chaudhary-Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              download
+            >
+              <Button onClick={handleResume}>
+                Resume
+                <Icon as={DownloadIcon} />
+              </Button>
+            </a>
+          </MenuList>
+        </Menu>
+
         </Box>
       </Flex>
       <VStack

@@ -27,7 +27,10 @@ const Projects = () => {
           p="10px"
         >
           <Flex justifyContent="space-between" mb="20px">
-            <Text as='b' fontSize='2xl'>Milaap</Text>
+            <Text as='b' fontSize='2xl' display={{
+              base:"none",
+              sm:"block"
+            }}>Milaap</Text>
             <Flex gap="10px">
               <Box
                 data-content="REACT"
@@ -110,7 +113,10 @@ const Projects = () => {
           p="10px"
         >
           <Flex justifyContent="space-between" mb="20px">
-            <Text as='b' fontSize='2xl'>Tripvillas</Text>
+            <Text as='b' fontSize='2xl' display={{
+              base:"none",
+              sm:"block"
+            }}>Tripvillas</Text>
             <Flex gap="10px">
               <Box
                 data-content="REACT"
@@ -185,7 +191,10 @@ const Projects = () => {
           p="10px"
         >
           <Flex justifyContent="space-between" mb="20px">
-            <Text as='b' fontSize='2xl'>Revv</Text>
+            <Text as='b' fontSize='2xl' display={{
+              base:"none",
+              sm:"block"
+            }}>Revv</Text>
             <Flex gap="10px">
               <Box
                 data-content="REACT"

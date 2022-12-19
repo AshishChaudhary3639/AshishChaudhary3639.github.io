@@ -15,7 +15,7 @@ const Home = () => {
         w="90%"
         m="auto"
       >
-        <Box w="37%" objectFit="cover">
+        <Box w={{base:"60%",sm:"45%",md:"38%"}} objectFit="cover">
           <Image
             src={process.env.PUBLIC_URL + "/ashish.jpg"}
             w={{
