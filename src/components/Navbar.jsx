@@ -24,7 +24,7 @@ import styles from "../pages/Skills.module.css";
 const Navbar = () => {
   const handleResume = () => {
     return window.open(
-      "https://drive.google.com/file/d/10RfcKTz9eADgoMQKociXZa-KbMjd5YeR/view?usp=sharing"
+      "https://drive.google.com/file/d/1NfQwkYj1_q0VyVGcjxEoAJBWImEU5ceG/view?usp=share_link"
     );
   };
 
