@@ -91,7 +91,7 @@ const Projects = () => {
               </Button>
             </Link>
             <Link
-              href="https://6365231ddc409e0299100e43--frabjous-profiterole-b917b5.netlify.app/"
+              href="https://frabjous-profiterole-b917b5.netlify.app/"
               isExternal
             >
               <Button
