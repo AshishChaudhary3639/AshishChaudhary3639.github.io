@@ -6,22 +6,29 @@ import {
   Spacer,
   Show,
   VStack,
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-  IconButton,
+  Drawer,
+  useDisclosure,
+  DrawerOverlay,
+  DrawerContent,
+  DrawerCloseButton,
+  DrawerBody,
 } from "@chakra-ui/react";
-import React from "react";
+import React, { useRef } from "react";
 import { Icon } from "@chakra-ui/react";
-import { NavHashLink as NavLink } from "react-router-hash-link";
+import { HashLink as NavLink } from "react-router-hash-link";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
 import { DownloadIcon, HamburgerIcon } from "@chakra-ui/icons";
 import { FaHackerrank } from "react-icons/fa";
 import { Link } from "@chakra-ui/react";
 import styles from "../pages/Skills.module.css";
-
+import { Link as ScrollLink } from "react-scroll";
 const Navbar = () => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const btnRef = useRef();
+
+  const scrollToSection = (section) => {
+    section.scrollIntoView({ behavior: "smooth" });
+  };
   const handleResume = () => {
     return window.open(
       "https://drive.google.com/file/d/1Du9A6lRvG6AcKc6gK1t50s3Xdrl9ayrG/view?usp=share_link"
@@ -39,19 +46,18 @@ const Navbar = () => {
         pos="fixed"
         w="100%"
         zIndex={2}
+        p={'0.6rem'}
         h={{
           md: "4rem",
         }}
         justifyContent={"left"}
         pr="340px"
       >
-    
         <Spacer />
-        <Show breakpoint='(min-width: 425px)'>
+        <Show breakpoint="(min-width: 425px)">
           <ButtonGroup
             gap="6"
             display={{
-             
               md: "flex",
             }}
             p={"8px 0px"}
@@ -62,7 +68,11 @@ const Navbar = () => {
                 Home
               </Button>
             </NavLink>
-
+            <NavLink smooth to="#about">
+              <Button colorScheme="teal" variant="outline">
+                About
+              </Button>
+            </NavLink>
             <NavLink smooth to="#skills">
               <Button colorScheme="teal" variant="outline">
                 Skills
@@ -73,7 +83,7 @@ const Navbar = () => {
                 Projects
               </Button>
             </NavLink>
-            <NavLink smooth to="#contact">
+            <NavLink smooth to="#contacts">
               <Button colorScheme="teal" variant="outline">
                 Contacts
               </Button>
@@ -91,61 +101,88 @@ const Navbar = () => {
         </Show>
         <Box
           display={{
-            sm:"none",
-            md:"none"
-          }}
-          m={"0px 210px 0px 0px"}
-          
-        >
-
-        <Menu
-          display={{
-            sm: "block",
+            sm: "none",
             md: "none",
           }}
+          m={"0px 210px 0px 0px"}
         >
-          <MenuButton
-            as={IconButton}
-            icon={<HamburgerIcon color="white" fontSize="2rem" />}
-            // icon={<GiHamburgerMenu color="white" fontSize="2rem"/>}
-            variant="outline"
-          />
+          <Button ref={btnRef} onClick={onOpen}>
+            <HamburgerIcon/>
+          </Button>
 
-          <MenuList>
-            <MenuItem>
-              <NavLink smooth to="#home">
-                Home
-              </NavLink>
-            </MenuItem>
-            <MenuItem>
-              <NavLink smooth to="#skills">
-                Skills
-              </NavLink>
-            </MenuItem>
-            <MenuItem>
-              <NavLink smooth to="#projects">
-                Projects
-              </NavLink>
-            </MenuItem>
-            <MenuItem>
-              <NavLink smooth to="#contact">
-                Contacts
-              </NavLink>
-            </MenuItem>
-            <a
-              href="/files/Ashish-Chaudhary-Resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              download
-            >
-              <Button onClick={handleResume}>
-                Resume
-                <Icon as={DownloadIcon} />
-              </Button>
-            </a>
-          </MenuList>
-        </Menu>
-
+          <Drawer
+            isOpen={isOpen}
+            placement="left"
+            onClose={onClose}
+            finalFocusRef={btnRef}
+            size={"xs"}
+          >
+            <DrawerOverlay />
+            <DrawerContent>
+              <DrawerCloseButton />
+              <DrawerBody>
+                <VStack  >
+                  <ScrollLink
+                    
+                    to="home"
+                    smooth
+                    onClick={() =>
+                      scrollToSection(document.getElementById("home"))
+                    }
+                  >
+                    <Button  onClick={onClose}>Home</Button>
+                  </ScrollLink>
+                  <ScrollLink
+                    to="about"
+                    smooth
+                    onClick={() =>
+                      scrollToSection(document.getElementById("about"))
+                    }
+                  >
+                    <Button onClick={onClose}>About</Button>
+                  </ScrollLink>
+                  <ScrollLink
+                    to="skills"
+                    smooth
+                    onClick={() =>
+                      scrollToSection(document.getElementById("skills"))
+                    }
+                  >
+                    <Button onClick={onClose}>Skills</Button>
+                  </ScrollLink>
+                  <ScrollLink
+                    to="projects"
+                    smooth
+                    onClick={() =>
+                      scrollToSection(document.getElementById("projects"))
+                    }
+                  >
+                    <Button onClick={onClose}>Projects</Button>
+                  </ScrollLink>
+                  <ScrollLink
+                    to="contacts"
+                    smooth
+                    onClick={() =>
+                      scrollToSection(document.getElementById("contacts"))
+                    }
+                  >
+                    <Button onClick={onClose}>Contact</Button>
+                  </ScrollLink>
+                  <a
+                    href="/files/Ashish-Chaudhary-Resume.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    download
+                  >
+                    <Button onClick={handleResume}>
+                      Resume
+                      <Icon as={DownloadIcon} />
+                    </Button>
+                  </a>
+                </VStack>
+              </DrawerBody>
+            </DrawerContent>
+          </Drawer>
         </Box>
       </Flex>
       <VStack

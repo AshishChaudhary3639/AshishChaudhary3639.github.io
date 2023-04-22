@@ -25,7 +25,7 @@ const AllRoutes = () => {
       <div id="github-calander" style={{padding:"0px"}}>
         <GitHub />
       </div>
-      <div id="contact" style={{padding:"0px"}}>
+      <div id="contacts" style={{padding:"0px"}}>
         <Contact />
       </div>
     </>
